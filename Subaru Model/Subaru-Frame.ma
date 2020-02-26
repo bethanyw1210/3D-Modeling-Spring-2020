@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: Subaru-Frame.ma
-//Last modified: Tue, Feb 25, 2020 08:03:06 PM
+//Last modified: Tue, Feb 25, 2020 08:09:42 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -12,18 +12,18 @@ fileInfo "product" "Maya 2020";
 fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 17763)\n";
-fileInfo "UUID" "2B71CF7E-4701-6A8F-675A-1B884BBC0DC5";
+fileInfo "UUID" "3A4C84A8-4BD9-EDEA-D630-8C86350CAB5E";
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B71CB56E-4ECA-9E29-6499-E5A7D09CA44C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -22.342941790023726 8.0297101635809653 22.196912575451687 ;
-	setAttr ".r" -type "double3" -376.53835275051199 -763.79999999977758 0 ;
+	setAttr ".t" -type "double3" -23.692889153966746 9.5564002221189686 27.717391538192331 ;
+	setAttr ".r" -type "double3" -374.73835275001909 -761.79999999990923 -1.0666187385013305e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3527E4BB-419C-2035-F5DE-458F77F0199C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 34.054487682816742;
+	setAttr ".coi" 39.271302747036287;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -20788,7 +20788,6 @@ createNode transform -n "Subaru_Frame:Panels";
 createNode mesh -n "Subaru_Frame:Subaru_Frame:PanelsShape" -p "Subaru_Frame:Panels";
 	rename -uid "4996C22B-4287-8B93-05E1-A69B938109AF";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:857]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.48295161222426586 0.36442685127258301 ;
@@ -23390,7 +23389,6 @@ createNode transform -n "Subaru_Frame:Fenders";
 createNode mesh -n "Subaru_Frame:Subaru_Frame:FendersShape" -p "Subaru_Frame:Fenders";
 	rename -uid "5A487E59-420F-5EA0-F479-B9AD542461AE";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:143]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -23839,7 +23837,6 @@ createNode transform -n "Subaru_Frame:Side_Mirrors";
 createNode mesh -n "Subaru_Frame:Subaru_Frame:Side_MirrosShape" -p "Subaru_Frame:Side_Mirrors";
 	rename -uid "1E35E3B5-4114-62CE-E6C6-D8B5663EF1DC";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:411]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
@@ -25094,7 +25091,6 @@ createNode transform -n "Subaru_Frame:Fans";
 createNode mesh -n "Subaru_Frame:Subaru_Frame:FansShape" -p "Subaru_Frame:Fans";
 	rename -uid "BD00A882-4F33-E97B-9A4A-E9A45A634E3A";
 	setAttr -k off ".v";
-	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[0:261]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.47550240643670616 0.35922521513332362 ;
@@ -25944,8 +25940,8 @@ createNode mesh -n "Subaru_Frame:Subaru_Frame:FansShape" -p "Subaru_Frame:Fans";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "4C0176DD-443F-A09E-80C4-4FA23419F302";
-	setAttr -s 8 ".lnk";
-	setAttr -s 8 ".slnk";
+	setAttr -s 18 ".lnk";
+	setAttr -s 18 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "4D973E30-42B2-CDF1-2BB8-B5ADF3E28A1D";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -26033,27 +26029,18 @@ createNode polyUnite -n "Subaru_Frame:polyUnite2";
 	rename -uid "E0A7BD72-4ABD-3EEE-5FB0-A3AFD964FAF5";
 createNode polyUnite -n "Subaru_Frame:polyUnite3";
 	rename -uid "56045F1F-41BD-76B7-92C3-69858847F008";
-createNode lambert -n "Subaru_Frame:Tire";
-	rename -uid "F9987F3B-4305-C5B6-8CE5-249E6AA18428";
-	setAttr ".c" -type "float3" 0.035999998 0.035999998 0.035999998 ;
 createNode shadingEngine -n "Subaru_Frame:lambert2SG";
 	rename -uid "1197C1AC-4C66-C3A2-DB94-80A4524BA50B";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Subaru_Frame:materialInfo1";
 	rename -uid "9D2E33F7-494F-04A4-6B7D-D8921175A1D5";
-createNode lambert -n "Subaru_Frame:Wheel";
-	rename -uid "428CBB54-4AE8-766F-165D-80B573FD75BB";
-	setAttr ".c" -type "float3" 0.093999997 0.093999997 0.093999997 ;
 createNode shadingEngine -n "Subaru_Frame:lambert3SG";
 	rename -uid "551F8D3C-4FEF-EC57-64E8-26AAC88B9144";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Subaru_Frame:materialInfo2";
 	rename -uid "4B7C1552-407D-9178-B71C-4F80695FD066";
-createNode lambert -n "Subaru_Frame:Lugnuts";
-	rename -uid "94C5E308-4D2A-9714-C67D-288C31894C51";
-	setAttr ".c" -type "float3" 0.31 0.31 0.31 ;
 createNode shadingEngine -n "Subaru_Frame:lambert4SG";
 	rename -uid "4989CD60-4112-555F-DA7E-0B952C9AE702";
 	setAttr ".ihi" 0;
@@ -26111,51 +26098,30 @@ createNode shadingEngine -n "Subaru_Frame:Subaru_Tires:lambert3SG";
 	setAttr ".ro" yes;
 createNode materialInfo -n "Subaru_Frame:Subaru_Tires:materialInfo2";
 	rename -uid "52168E29-4A30-BCB6-4C87-289EA5757879";
-createNode lambert -n "Subaru_Frame:Subaru_Tires:Wheel";
-	rename -uid "D353077F-41D0-5C3D-E84F-428768025393";
-	setAttr ".c" -type "float3" 0.093999997 0.093999997 0.093999997 ;
 createNode shadingEngine -n "Subaru_Frame:Subaru_Tires:lambert2SG";
 	rename -uid "8CB811E7-4A4C-725B-1D5A-229887BCC65D";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Subaru_Frame:Subaru_Tires:materialInfo1";
 	rename -uid "B239E932-4C2D-1344-47EE-13B837DA4CF3";
-createNode lambert -n "Subaru_Frame:Subaru_Tires:Tire";
-	rename -uid "D4EB5DB5-48F5-5B07-603E-B18558B5055B";
-	setAttr ".c" -type "float3" 0.035999998 0.035999998 0.035999998 ;
 createNode shadingEngine -n "Subaru_Frame:Subaru_Tires:lambert4SG";
 	rename -uid "D0D56CC2-416C-CF3C-0234-2C8D04E1509D";
 	setAttr ".ihi" 0;
 	setAttr ".ro" yes;
 createNode materialInfo -n "Subaru_Frame:Subaru_Tires:materialInfo3";
 	rename -uid "4F084CE4-4CE4-4F16-8AD5-EDB3B4C0102B";
-createNode lambert -n "Subaru_Frame:Subaru_Tires:Lugnuts";
-	rename -uid "C6353FB5-406E-8B34-67DF-44B47B220F47";
-	setAttr ".c" -type "float3" 0.31 0.31 0.31 ;
-createNode groupId -n "Subaru_Frame:groupId2478";
-	rename -uid "F7AF8F1C-43EA-CCE0-581A-BBB486F46258";
-	setAttr ".ihi" 0;
-createNode groupId -n "Subaru_Frame:groupId2479";
-	rename -uid "709213F3-4F85-42AE-42CC-4B8EA20357AA";
-	setAttr ".ihi" 0;
 createNode displayLayer -n "Subaru_Frame:rc";
 	rename -uid "5090A41E-433F-3D60-9B59-3FB774531986";
 	setAttr ".do" 6;
 createNode displayLayer -n "Subaru_Frame:body";
 	rename -uid "ECD3FEA8-4A48-6369-F7DC-2583DBA5463E";
 	setAttr ".do" 7;
-createNode groupId -n "Subaru_Frame:groupId2524";
-	rename -uid "2203647C-4D47-AC06-B305-59B7563B030B";
-	setAttr ".ihi" 0;
 createNode displayLayer -n "Subaru_Frame:lights";
 	rename -uid "F984427B-4DE9-C10C-25EE-0F96C007D5BC";
 	setAttr ".do" 8;
 createNode displayLayer -n "panels";
 	rename -uid "C30E8F20-44BA-EAA4-3AE5-45A5B7F26273";
 	setAttr ".do" 9;
-createNode groupId -n "groupId1";
-	rename -uid "2654D268-47A1-3D40-AC47-66A45C35E841";
-	setAttr ".ihi" 0;
 createNode displayLayer -n "Subaru_Frame:fenders";
 	rename -uid "24EF816A-4D41-3080-9F7C-389D2D2F3048";
 	setAttr ".do" 10;
@@ -26165,15 +26131,135 @@ createNode displayLayer -n "Subaru_Frame:sidemirrors";
 createNode displayLayer -n "Subaru_Frame:Fans2";
 	rename -uid "21F52BDD-46E9-B26E-396A-2C9447FE0220";
 	setAttr ".do" 12;
-createNode groupId -n "Subaru_Frame:groupId2532";
-	rename -uid "552BE575-484B-4C13-DE12-66B2D5DAB998";
+createNode shadingEngine -n "Subaru_Tires:lambert3SG";
+	rename -uid "7F2A3148-41BD-7A52-A60D-52AB6D097114";
 	setAttr ".ihi" 0;
-createNode groupId -n "Subaru_Frame:groupId2533";
-	rename -uid "751801B0-4076-69BF-617A-8E80ED013DD1";
+	setAttr ".ro" yes;
+createNode materialInfo -n "Subaru_Tires:materialInfo2";
+	rename -uid "CC90B536-4D9C-0865-88CE-76BB320E83C9";
+createNode shadingEngine -n "Subaru_Tires:lambert2SG";
+	rename -uid "D766B26E-47E0-6A1E-94DD-08BEE6268C5D";
 	setAttr ".ihi" 0;
-createNode groupId -n "Subaru_Frame:groupId2534";
-	rename -uid "D233861E-4353-4134-9AD6-FE87148BE143";
+	setAttr ".ro" yes;
+createNode materialInfo -n "Subaru_Tires:materialInfo1";
+	rename -uid "35FB3028-446C-D947-071F-B581DC7CE4C6";
+createNode shadingEngine -n "Subaru_Tires:lambert4SG";
+	rename -uid "1B436152-427D-13A8-B282-A3B2A94F5B9F";
 	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "Subaru_Tires:materialInfo3";
+	rename -uid "2C8E82DD-473D-B467-FD52-9FA4B0C10DAA";
+createNode lambert -n "BodyWork";
+	rename -uid "A5392695-47A9-0100-69A2-07A9B9C4DDE5";
+	setAttr ".c" -type "float3" 0.0151 0.0418 0.1934 ;
+createNode shadingEngine -n "lambert2SG";
+	rename -uid "218DCE36-4DF5-14CD-9FC6-BF9C2B05C419";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo1";
+	rename -uid "701BEC04-4ECD-A8BF-C288-60AA3754ACFC";
+createNode lambert -n "Fenders";
+	rename -uid "AE7E1607-43BC-F66B-8385-F1A75A89244C";
+	setAttr ".c" -type "float3" 0.016000001 0.016000001 0.016000001 ;
+createNode shadingEngine -n "lambert3SG";
+	rename -uid "16152339-45E4-E758-C839-8BA6E05B0774";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo2";
+	rename -uid "6B0CC494-4AC7-A717-917A-C2A810062AE7";
+createNode lambert -n "lights";
+	rename -uid "52C76BC9-41D8-30E4-2F90-E795EA52E206";
+	setAttr ".c" -type "float3" 0.91500002 0.91500002 0.91500002 ;
+createNode shadingEngine -n "lambert4SG";
+	rename -uid "6685F6EE-4EF4-B49B-1A50-DE969449685B";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo3";
+	rename -uid "28351929-4947-EE22-1ED9-1197203B6273";
+createNode lambert -n "RollCage";
+	rename -uid "5A2FA556-4BA4-A315-0B90-2E873E61BBFF";
+	setAttr ".c" -type "float3" 0.324 0.324 0.324 ;
+createNode shadingEngine -n "lambert5SG";
+	rename -uid "53AFE809-4276-ED4B-997A-7FB5BCBDD615";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "4E30C3EC-4915-3E48-CFF8-0EBE6175CFD8";
+createNode lambert -n "Panels";
+	rename -uid "CEF3C883-49AD-FBCD-2BFF-3BA65C388836";
+	setAttr ".c" -type "float3" 0.1381 0.1444 0.1806 ;
+createNode shadingEngine -n "lambert6SG";
+	rename -uid "7CD6836E-43F7-9E43-E433-FEA2AE3A1935";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+	rename -uid "D9ACAF69-4B3C-063D-1FC5-1CB7B9FE62C7";
+createNode lambert -n "Mirrors";
+	rename -uid "EE8FB7DF-41EE-8BB1-69E5-C59909F01B70";
+	setAttr ".c" -type "float3" 0 0 0 ;
+createNode shadingEngine -n "lambert7SG";
+	rename -uid "5DE37AA6-4097-CB63-84B5-A2BD1C3BB73C";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo6";
+	rename -uid "CC9F67A6-46AE-1B3D-390A-C389BD384619";
+createNode lambert -n "Fans";
+	rename -uid "9D56CDC6-441A-1EBA-2389-B7BDCA65601A";
+	setAttr ".c" -type "float3" 0.016000001 0.016000001 0.016000001 ;
+createNode shadingEngine -n "lambert8SG";
+	rename -uid "063B1E0E-4E94-4C54-3F76-17B155C27524";
+	setAttr ".ihi" 0;
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo7";
+	rename -uid "BE395711-4AB5-97EB-8EB5-B6AB8333D190";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "68A30E2C-4319-BEF4-E97D-B8BC4F65A1E8";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -330.95236780151544 -322.61903479931897 ;
+	setAttr ".tgi[0].vh" -type "double2" 317.85713022663526 336.90474851737002 ;
+	setAttr -s 14 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[0].y" 150;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[1].y" 150;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[2].y" 150;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[3].y" 150;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[4].y" 150;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[5].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[6].y" 150;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[7].y" 150;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[8].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" -252.85714721679688;
+	setAttr ".tgi[0].ni[9].y" 150;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[10].y" 150;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
+	setAttr ".tgi[0].ni[11].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[11].y" 150;
+	setAttr ".tgi[0].ni[11].nvs" 1923;
+	setAttr ".tgi[0].ni[12].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[12].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[12].nvs" 1923;
+	setAttr ".tgi[0].ni[13].x" 54.285713195800781;
+	setAttr ".tgi[0].ni[13].y" 145.71427917480469;
+	setAttr ".tgi[0].ni[13].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -26184,17 +26270,15 @@ select -ne :hardwareRenderingGlobals;
 		 0 0 0 0 ;
 	setAttr ".fprt" yes;
 select -ne :renderPartition;
-	setAttr -s 8 ".st";
+	setAttr -s 18 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 11 ".s";
+	setAttr -s 12 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 7 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 7 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultRenderGlobals;
@@ -26247,37 +26331,12 @@ connectAttr ":defaultColorMgtGlobals.cfp" "Subaru_Frame:imagePlaneShape1.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "Subaru_Frame:imagePlaneShape1.ws";
 connectAttr ":frontShape.msg" "Subaru_Frame:imagePlaneShape1.ltc";
 connectAttr "Subaru_Frame:rc.di" "Subaru_Frame:RollCage.do";
-connectAttr "Subaru_Frame:groupId2479.id" "Subaru_Frame:Subaru_Frame:RollCageShape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Subaru_Frame:RollCageShape.iog.og[0].gco"
-		;
 connectAttr "Subaru_Frame:body.di" "Subaru_Frame:Body.do";
-connectAttr "Subaru_Frame:groupId2478.id" "Subaru_Frame:Body40Shape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Body40Shape.iog.og[0].gco";
 connectAttr "Subaru_Frame:lights.di" "Subaru_Frame:Lights.do";
-connectAttr "Subaru_Frame:groupId2524.id" "Subaru_Frame:LightsShape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:LightsShape.iog.og[0].gco";
 connectAttr "panels.di" "Subaru_Frame:Panels.do";
-connectAttr "groupId1.id" "Subaru_Frame:Subaru_Frame:PanelsShape.iog.og[0].gid";
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Subaru_Frame:PanelsShape.iog.og[0].gco"
-		;
 connectAttr "Subaru_Frame:fenders.di" "Subaru_Frame:Fenders.do";
-connectAttr "Subaru_Frame:groupId2532.id" "Subaru_Frame:Subaru_Frame:FendersShape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Subaru_Frame:FendersShape.iog.og[0].gco"
-		;
 connectAttr "Subaru_Frame:sidemirrors.di" "Subaru_Frame:Side_Mirrors.do";
-connectAttr "Subaru_Frame:groupId2533.id" "Subaru_Frame:Subaru_Frame:Side_MirrosShape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Subaru_Frame:Side_MirrosShape.iog.og[0].gco"
-		;
 connectAttr "Subaru_Frame:Fans2.di" "Subaru_Frame:Fans.do";
-connectAttr "Subaru_Frame:groupId2534.id" "Subaru_Frame:Subaru_Frame:FansShape.iog.og[0].gid"
-		;
-connectAttr ":initialShadingGroup.mwc" "Subaru_Frame:Subaru_Frame:FansShape.iog.og[0].gco"
-		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Subaru_Frame:lambert2SG.message" ":defaultLightSet.message";
@@ -26286,6 +26345,16 @@ relationship "link" ":lightLinker1" "Subaru_Frame:lambert4SG.message" ":defaultL
 relationship "link" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Subaru_Tires:lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Subaru_Tires:lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "Subaru_Tires:lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Subaru_Frame:lambert2SG.message" ":defaultLightSet.message";
@@ -26294,51 +26363,37 @@ relationship "shadowLink" ":lightLinker1" "Subaru_Frame:lambert4SG.message" ":de
 relationship "shadowLink" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "Subaru_Frame:Subaru_Tires:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Subaru_Tires:lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Subaru_Tires:lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "Subaru_Tires:lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert5SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert6SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert7SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert8SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "layerManager.dli[1]" "Subaru_Frame:Side.id";
 connectAttr "layerManager.dli[2]" "Subaru_Frame:FTireSide.id";
 connectAttr "layerManager.dli[3]" "Subaru_Frame:FrontView.id";
-connectAttr "Subaru_Frame:Tire.oc" "Subaru_Frame:lambert2SG.ss";
 connectAttr "Subaru_Frame:lambert2SG.msg" "Subaru_Frame:materialInfo1.sg";
-connectAttr "Subaru_Frame:Tire.msg" "Subaru_Frame:materialInfo1.m";
-connectAttr "Subaru_Frame:Wheel.oc" "Subaru_Frame:lambert3SG.ss";
 connectAttr "Subaru_Frame:lambert3SG.msg" "Subaru_Frame:materialInfo2.sg";
-connectAttr "Subaru_Frame:Wheel.msg" "Subaru_Frame:materialInfo2.m";
-connectAttr "Subaru_Frame:Lugnuts.oc" "Subaru_Frame:lambert4SG.ss";
 connectAttr "Subaru_Frame:lambert4SG.msg" "Subaru_Frame:materialInfo3.sg";
-connectAttr "Subaru_Frame:Lugnuts.msg" "Subaru_Frame:materialInfo3.m";
-connectAttr "Subaru_Frame:Lugnuts.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
 connectAttr "Subaru_Frame:lambert3SG.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
 		;
 connectAttr "Subaru_Frame:lambert2SG.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "Subaru_Frame:Wheel.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "Subaru_Frame:Tire.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
 		;
 connectAttr "Subaru_Frame:lambert4SG.msg" "Subaru_Frame:hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
 		;
 connectAttr "layerManager.dli[5]" "Subaru_Frame:RollCageSide.id";
 connectAttr "layerManager.dli[4]" "Subaru_Frame:BackView.id";
-connectAttr "Subaru_Frame:Subaru_Tires:Wheel.oc" "Subaru_Frame:Subaru_Tires:lambert3SG.ss"
-		;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert3SG.msg" "Subaru_Frame:Subaru_Tires:materialInfo2.sg"
-		;
-connectAttr "Subaru_Frame:Subaru_Tires:Wheel.msg" "Subaru_Frame:Subaru_Tires:materialInfo2.m"
-		;
-connectAttr "Subaru_Frame:Subaru_Tires:Tire.oc" "Subaru_Frame:Subaru_Tires:lambert2SG.ss"
 		;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert2SG.msg" "Subaru_Frame:Subaru_Tires:materialInfo1.sg"
 		;
-connectAttr "Subaru_Frame:Subaru_Tires:Tire.msg" "Subaru_Frame:Subaru_Tires:materialInfo1.m"
-		;
-connectAttr "Subaru_Frame:Subaru_Tires:Lugnuts.oc" "Subaru_Frame:Subaru_Tires:lambert4SG.ss"
-		;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert4SG.msg" "Subaru_Frame:Subaru_Tires:materialInfo3.sg"
-		;
-connectAttr "Subaru_Frame:Subaru_Tires:Lugnuts.msg" "Subaru_Frame:Subaru_Tires:materialInfo3.m"
 		;
 connectAttr "layerManager.dli[10]" "Subaru_Frame:rc.id";
 connectAttr "layerManager.dli[11]" "Subaru_Frame:body.id";
@@ -26347,36 +26402,88 @@ connectAttr "layerManager.dli[13]" "panels.id";
 connectAttr "layerManager.dli[14]" "Subaru_Frame:fenders.id";
 connectAttr "layerManager.dli[15]" "Subaru_Frame:sidemirrors.id";
 connectAttr "layerManager.dli[16]" "Subaru_Frame:Fans2.id";
+connectAttr "Subaru_Tires:lambert3SG.msg" "Subaru_Tires:materialInfo2.sg";
+connectAttr "Subaru_Tires:lambert2SG.msg" "Subaru_Tires:materialInfo1.sg";
+connectAttr "Subaru_Tires:lambert4SG.msg" "Subaru_Tires:materialInfo3.sg";
+connectAttr "BodyWork.oc" "lambert2SG.ss";
+connectAttr "Subaru_Frame:Body40Shape.iog" "lambert2SG.dsm" -na;
+connectAttr "lambert2SG.msg" "materialInfo1.sg";
+connectAttr "BodyWork.msg" "materialInfo1.m";
+connectAttr "Fenders.oc" "lambert3SG.ss";
+connectAttr "Subaru_Frame:Subaru_Frame:FendersShape.iog" "lambert3SG.dsm" -na;
+connectAttr "lambert3SG.msg" "materialInfo2.sg";
+connectAttr "Fenders.msg" "materialInfo2.m";
+connectAttr "lights.oc" "lambert4SG.ss";
+connectAttr "Subaru_Frame:LightsShape.iog" "lambert4SG.dsm" -na;
+connectAttr "lambert4SG.msg" "materialInfo3.sg";
+connectAttr "lights.msg" "materialInfo3.m";
+connectAttr "RollCage.oc" "lambert5SG.ss";
+connectAttr "Subaru_Frame:Subaru_Frame:RollCageShape.iog" "lambert5SG.dsm" -na;
+connectAttr "lambert5SG.msg" "materialInfo4.sg";
+connectAttr "RollCage.msg" "materialInfo4.m";
+connectAttr "Panels.oc" "lambert6SG.ss";
+connectAttr "Subaru_Frame:Subaru_Frame:PanelsShape.iog" "lambert6SG.dsm" -na;
+connectAttr "lambert6SG.msg" "materialInfo5.sg";
+connectAttr "Panels.msg" "materialInfo5.m";
+connectAttr "Mirrors.oc" "lambert7SG.ss";
+connectAttr "Subaru_Frame:Subaru_Frame:Side_MirrosShape.iog" "lambert7SG.dsm" -na
+		;
+connectAttr "lambert7SG.msg" "materialInfo6.sg";
+connectAttr "Mirrors.msg" "materialInfo6.m";
+connectAttr "Fans.oc" "lambert8SG.ss";
+connectAttr "Subaru_Frame:Subaru_Frame:FansShape.iog" "lambert8SG.dsm" -na;
+connectAttr "lambert8SG.msg" "materialInfo7.sg";
+connectAttr "Fans.msg" "materialInfo7.m";
+connectAttr "RollCage.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "lambert7SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "lambert6SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "Mirrors.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "lights.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "Fans.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "BodyWork.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "Fenders.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "Panels.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "lambert8SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
+connectAttr "lambert5SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[11].dn"
+		;
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[12].dn"
+		;
+connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[13].dn"
+		;
 connectAttr "Subaru_Frame:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Subaru_Frame:lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Subaru_Frame:lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "Subaru_Frame:Subaru_Tires:lambert4SG.pa" ":renderPartition.st" -na;
-connectAttr "Subaru_Frame:Tire.msg" ":defaultShaderList1.s" -na;
-connectAttr "Subaru_Frame:Wheel.msg" ":defaultShaderList1.s" -na;
-connectAttr "Subaru_Frame:Lugnuts.msg" ":defaultShaderList1.s" -na;
-connectAttr "Subaru_Frame:Subaru_Tires:Tire.msg" ":defaultShaderList1.s" -na;
-connectAttr "Subaru_Frame:Subaru_Tires:Wheel.msg" ":defaultShaderList1.s" -na;
-connectAttr "Subaru_Frame:Subaru_Tires:Lugnuts.msg" ":defaultShaderList1.s" -na;
+connectAttr "Subaru_Tires:lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "Subaru_Tires:lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "Subaru_Tires:lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert5SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert6SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert7SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert8SG.pa" ":renderPartition.st" -na;
+connectAttr "BodyWork.msg" ":defaultShaderList1.s" -na;
+connectAttr "Fenders.msg" ":defaultShaderList1.s" -na;
+connectAttr "lights.msg" ":defaultShaderList1.s" -na;
+connectAttr "RollCage.msg" ":defaultShaderList1.s" -na;
+connectAttr "Panels.msg" ":defaultShaderList1.s" -na;
+connectAttr "Mirrors.msg" ":defaultShaderList1.s" -na;
+connectAttr "Fans.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "Subaru_Frame:Body40Shape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "Subaru_Frame:Subaru_Frame:RollCageShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Subaru_Frame:LightsShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
-connectAttr "Subaru_Frame:Subaru_Frame:PanelsShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Subaru_Frame:Subaru_Frame:FendersShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Subaru_Frame:Subaru_Frame:Side_MirrosShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Subaru_Frame:Subaru_Frame:FansShape.iog.og[0]" ":initialShadingGroup.dsm"
-		 -na;
-connectAttr "Subaru_Frame:groupId2478.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Subaru_Frame:groupId2479.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Subaru_Frame:groupId2524.msg" ":initialShadingGroup.gn" -na;
-connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Subaru_Frame:groupId2532.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Subaru_Frame:groupId2533.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Subaru_Frame:groupId2534.msg" ":initialShadingGroup.gn" -na;
 // End of Subaru-Frame.ma
