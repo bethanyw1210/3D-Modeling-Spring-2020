@@ -1,60 +1,60 @@
-newmtl lambert2SG
+newmtl Subaru_Frame:FrameTexture:lambert2SG
+illum 4
+Kd 0.02 0.04 0.19
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Subaru_Frame:FrameTexture:lambert3SG
 illum 4
 Kd 0.02 0.02 0.02
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert3SG
+newmtl Subaru_Frame:FrameTexture:lambert4SG
 illum 4
-Kd 1.00 1.00 1.00
+Kd 0.92 0.92 0.92
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert4SG
+newmtl Subaru_Frame:FrameTexture:lambert5SG
 illum 4
-Kd 0.13 0.13 0.13
+Kd 0.32 0.32 0.32
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert5SG
+newmtl Subaru_Frame:FrameTexture:lambert6SG
 illum 4
-Kd 0.11 0.11 0.11
+Kd 0.14 0.14 0.18
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert6SG
-illum 4
-Kd 0.00 0.11 0.62
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-newmtl lambert7SG
-illum 4
-Kd 0.00 0.47 0.02
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-newmtl lambert8SG
-illum 4
-Kd 0.00 0.26 0.71
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-Ni 1.00
-newmtl lambert9SG
+newmtl Subaru_Frame:FrameTexture:lambert7SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert10SG
+newmtl Subaru_Frame:FrameTexture:lambert8SG
 illum 4
-Kd 0.50 0.50 0.50
+Kd 0.02 0.02 0.02
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
-newmtl lambert11SG
+newmtl Subaru_Tires:Wheels:lambert2SG
 illum 4
-Kd 0.00 0.00 0.00
+Kd 0.04 0.04 0.04
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Subaru_Tires:Wheels:lambert3SG
+illum 4
+Kd 0.09 0.09 0.09
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl Subaru_Tires:Wheels:lambert4SG
+illum 4
+Kd 0.31 0.31 0.31
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 Ni 1.00
